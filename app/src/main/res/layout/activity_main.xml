@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    tools:context="com.shannontheoret.machikorogame.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:id="@+id/playerHandTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <TableRow android:orientation="vertical">
+
+                <TextView android:text="Wheat" />
+
+                <TextView android:id="@+id/wheat_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="Bakery" />
+
+                <TextView android:id="@+id/bakery_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="Ranch" />
+
+                <TextView android:id="@+id/ranch_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="Cafe" />
+
+                <TextView android:id="@+id/cafe_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="Convenience Store" />
+
+                <TextView android:id="@+id/conv_store_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="Forest" />
+
+                <TextView android:id="@+id/forest_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="TRAIN STATION" />
+
+                <TextView android:id="@+id/train_station_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="SHOPPING MALL" />
+
+                <TextView android:id="@+id/shopping_mall_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="AMUSEMENT PARK" />
+
+                <TextView android:id="@+id/amusement_park_qty" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView android:text="RADIO TOWER" />
+
+                <TextView android:id="@+id/radio_tower_qty" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="215dp"
+            android:layout_height="474dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:src="@drawable/coin"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="111dp" />
+
+            <TextView
+                android:id="@+id/coinCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/imageView1"
+                android:layout_alignRight="@+id/imageView1"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="127dp"
+                android:clickable="true"
+                android:onClick="rollDice"
+                android:src="@drawable/dice_1" />
+
+            <Spinner
+                android:id="@+id/card_stock_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_above="@+id/end_turn"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="17dp"
+             />
+
+            <Button
+                android:id="@+id/purchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="purchaseCard"
+                android:text="Purchase" />
+
+            <Button
+                android:id="@+id/end_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:onClick="endTurn"
+                android:text="End Turn" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
